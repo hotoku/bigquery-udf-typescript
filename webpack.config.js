@@ -1,8 +1,7 @@
 var path = require("path");
 
 module.exports = {
-  // mode: "production",
-  mode: "development",
+  mode: "production",
   entry: "./src/main.ts",
   module: {
     rules: [{
@@ -17,8 +16,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
-    library: "main",
+    filename: "greet.js",
+    library: "greet",
     libraryTarget: "var",
   }
 };
