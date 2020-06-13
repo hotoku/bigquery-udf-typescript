@@ -1,6 +1,6 @@
-.PHONY: load prepare build test
+.PHONY: load prepare build test clean
 
-load: dist/greet.sql dist
+load: dist/greet.sql
 	cat $< | bq query
 
 dist/%.sql: sql/%.jinja.sql build
@@ -15,3 +15,6 @@ test:
 
 prepare:
 	npm i
+
+clean:
+	rm -rf dist
